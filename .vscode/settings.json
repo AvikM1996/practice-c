@@ -44,5 +44,6 @@
         "xutility": "cpp",
         "string": "cpp",
         "bitset": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
