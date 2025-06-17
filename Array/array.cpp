@@ -46,21 +46,82 @@
 //     return 0;
 // }
 
+// linear search
+// int main()
+// {
+//     int i, a[] = {2, 30, 5, 6, 7, 1, 10}, key;
+//     int size = sizeof(a) / sizeof(a[0]);
+//     std ::cout << "Enter key";
+//     std ::cin >> key;
+
+//     for (i = 0; i < size; i++)
+//     {
+//         if (key == a[i])
+//         {
+//             std::cout << "Key is found at index " << i << std::endl;
+//             return 0;
+//         }
+//     }
+//     std::cout << "key not found";
+//     return 0;
+// }
+// minimum number
+// int main()
+// {
+//     int i, a[] = {2, 0, 1, 2, 3, 10, -1, 6}, sum = 0;
+//     int size = sizeof(a) / sizeof(a[0]);
+
+//     for (i = 0; i < size; i++)
+//     {
+//         if(a[0] > a[i]){
+//             a[0]=a[i];
+//         }
+//     }
+//     std::cout << a[0];
+//     return 0;
+// }
+
+// maximum number
+
+// int main()
+// {
+//     int i, a[] = {2, 0, 1, 2, 3, 10, -1, 6}, sum = 0;
+//     int size = sizeof(a) / sizeof(a[0]);
+
+//     for (i = 0; i < size; i++)
+//     {
+//         if(a[0] > a[i]){
+//             a[0]=a[i];
+//         }
+//     }
+//     std::cout << a[0];
+//     return 0;
+// }
+
+// Binary search
 int main()
 {
-    int i, a[] = {2, 30, 5, 6, 7, 1, 10}, key;
+    int a[] = {1, 2, 3, 4, 5};
     int size = sizeof(a) / sizeof(a[0]);
-    std ::cout << "Enter key";
-    std ::cin >> key;
+    int left = 0, right = size - 1, key,mid;
 
-    for (i = 0; i < size; i++)
+    std ::cout << "Enter key";
+    std::cin >> key;
+
+    while (left <= right)
     {
-        if (key == a[i])
+        mid = (left + right) / 2;
+        if (key == a[mid])
         {
-            std::cout << "Key is found at index " << i << std::endl;
+            std::cout << mid;
             return 0;
         }
+        else if (key < a[mid])
+        {
+          right=mid-1;  
+        }else{
+            left=mid+1;
+        }
     }
-    std::cout << "key not found";
-    return 0;
+    std:: cout<< "Not found";
 }
